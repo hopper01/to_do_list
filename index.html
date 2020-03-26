@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie+edge">
+        <title>Adding Items into list</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="head">
+                <h1>To Do List</h1>
+                <label for="add"></label>
+                <button type="button" name="add" class="button" id="flip">+</button>
+            </div>
+            
+            <div class="wr-items" id="panel">
+                <form id="form" action="#">
+                    <textarea name="items" placeholder="New Task" rows="3" cols="40" class="l-item" id="text"></textarea>
+                    <button type="submit" name="submit" id="ad-btn">Add</button>
+                </form>
+            </div>
+            <div class="display">
+                <h2 id="list-h">My Items:</h2><br>
+                <div id="item-list">
+                </div>
+            </div>
+        </div>
+            
+            
+        <script src="app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script> 
+            $(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+            </script>
+    </body>
+</html>

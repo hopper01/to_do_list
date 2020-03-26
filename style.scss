@@ -1,0 +1,132 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+$borderType: 2px solid black;
+div{
+    display: block;
+}
+@media (min-width: 1200px){
+.container{
+    max-width: 1140px;
+}}
+
+body,html{
+    background-image: url("bg.png");
+}
+@mixin myFont {
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.head{
+    margin-left: 25%;
+    width: 600px;
+    height: 100px;
+    background-color: inherit;
+    border-radius: 25px;
+    box-shadow:6px 6px black;
+    z-index: -1;
+}
+ h1{
+     margin-left: 33%;
+     padding-top: 15px;
+     @include myFont();
+     font-display: fallback;
+     font-size: 50px;
+     color: black;
+     z-index: 4;
+ }
+ .button{
+     float: right;
+     margin-top: -41px;
+     margin-right: -5px;
+     height: 50px;
+     width: 50px;
+     border-radius: 50%;
+     border: $borderType;
+     font-size: 37px;
+     cursor: pointer;
+     @include myFont();  
+     background-color: darkcyan;
+     color: whitesmoke;
+ }
+ .l-item{
+    width: 400px;
+    height: 45px;
+    margin-left: 16em;
+    margin-top: 2em;
+    font-size: 20px;
+    @include myFont();
+    border-radius: 25px;
+    border: $borderType;
+     &::placeholder{
+         text-align: center;
+         font-size: 20px;
+         position: relative;
+         top: 7px;
+         @include myFont();
+     }
+    }
+    #ad-btn{
+        font-size: 25px;
+        @include myFont();
+        display: inline-block;
+        margin-left: 43px;
+        margin-top: 0px;
+        cursor: pointer;
+        border: $borderType;
+        border-radius: 25px;
+        background-color: darkcyan;
+        color: whitesmoke;
+    }
+.wr-items{
+    display: none;
+    z-index: 1;
+}
+.display{
+    width: 800px;
+    margin-top: 30px;
+    margin-left: 11em;
+}
+h2{
+    @include myFont();
+    font-size: 40px;
+    color: black;
+    margin-left: 8em;
+    margin-top: 10px;
+    }
+#list-h{
+    @include myFont();
+    color: black;
+}
+.remove-list{
+    @include myFont();
+    margin-left: 20em;
+    font-size: 20px;
+    color: rgba(221, 26, 26, 0.849);
+    cursor: pointer;
+    text-decoration: solid;
+}
+a:hover{
+    color:brown;
+}
+li{
+    border: $borderType;
+    border-color: rgba(0, 0, 0, 0.76);
+    list-style-type: square;
+    padding-left: 3px;
+    font-size: 25px;
+}
+.date{
+    @include myFont();
+    font-size: 14px;
+    margin-left: 2px;
+}
